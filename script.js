@@ -14,6 +14,11 @@ import { UnrealBloomPass } from 'https://cdn.skypack.dev/three@0.136.0/examples/
 const perlin = new ImprovedNoise();
 let v3 = new THREE.Vector3();
 
+
+setTimeout(function () {
+      window.location.href= 'http://home.metamorphnith.tech/';
+      }, 5000);
+
 let scene = new THREE.Scene();
 let camera = new THREE.PerspectiveCamera(45, innerWidth / innerHeight, 1, 5000);
 camera.position.set(5, 2, 5).setLength(12);
@@ -28,6 +33,8 @@ window.addEventListener("resize", () => {
   m.resolution.set(innerWidth, innerHeight);
   bloomPass.resolution.set(innerWidth, innerHeight);
 })
+
+
 
 let controls = new OrbitControls(camera, renderer.domElement);
 controls.enablePan = false;
@@ -297,8 +304,6 @@ function smoothstep (min, max, value) {
   return x*x*(3 - 2*x);
 	
 	
-	setTimeout(function () {
-      window.location.href= 'http://home.metamorphnith.tech/';
-      }, 5000);
+	
     
 };
