@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+body{
+  overflow: hidden;
+  margin: 0;
+}
+
+div .abc{
+  left: 50%;
+  transform: translateY(0%) rotate(45deg);
+  
+                opacity: 0;
+}
+svg {
+	font-family: 'Russo One', sans-serif;
+	position: absolute; 
+  z-index: 2;
+	width: 100%; }
+svg text {
+	text-transform: uppercase;
+	animation: stroke 5s infinite alternate;
+	stroke-width: 2;
+	stroke: #7e0778;
+	font-size: 140px;
+}
+@keyframes stroke {
+	0%   {
+		fill: rgba(72,138,20,0); stroke: white;
+		stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 2;
+	}
+	70%  {fill: rgba(72,138,20,0); stroke:  white; }
+	80%  {fill: rgba(72,138,20,0); stroke:  white; stroke-width: 3; }
+	100% {
+		fill:  white; stroke: rgba(54,95,160,0); 
+		stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
+	}
+}
+@keyframes scrolldown {
+            0%{
+                transform: translateY(20%) rotate(45deg);
+                opacity: 0.7;
+            }
+            50%{
+                transform: translateY(0%) rotate(45deg);
+                opacity: 0.2;
+            }
+            100%{
+                transform: translateY(20%) rotate(45deg);
+                opacity: 0.7;
+            }
+        }
+
+#info{
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  text-align: center;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2vh;
+  color: black;
+}
+
+#writing{
+  visibility: hidden;
+  position: absolute;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 10vh;
+  bottom: 2vh;
+  left: calc(50% - 33vh);
+  color: #0be;
+  text-shadow: 0px -3px 2px white;
+}
